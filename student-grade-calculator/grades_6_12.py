@@ -81,6 +81,18 @@ def calculate_gpa(letter_grades: list[str]) -> float:
     return round(total_points / len(letter_grades), 2)
 
 
+def is_passing(score: float) -> bool:
+    """Determine whether a score is passing.
+
+    Args:
+        score: Numeric score to evaluate.
+
+    Returns:
+        True if score is 60 or above, False otherwise.
+    """
+    return score >= 60
+
+
 def get_student_summary(student_name: str, scores: list[float]) -> str:
     """Generate a formatted academic summary for a student.
 
