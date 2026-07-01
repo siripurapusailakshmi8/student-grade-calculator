@@ -43,6 +43,7 @@ jobs:
         uses: anthropics/claude-code-action@beta
         with:
           anthropic_api_key: ${{ secrets.MY_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # Review prompt — Claude Code reads CLAUDE.md and checks the PR
           direct_prompt: |
             Read CLAUDE.md in this repository to understand the project standards.
